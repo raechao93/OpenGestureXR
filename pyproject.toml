@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "opengesturexr"
+version = "0.2.0"
+description = "Open-source SDK for AI-powered hand gesture interaction in XR"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Rui Chao", email = "rchao93@gmail.com"},
+]
+keywords = ["xr", "ar", "vr", "hand-tracking", "gesture-recognition", "openxr", "mediapipe"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "mediapipe>=0.10.0",
+    "opencv-python>=4.8.0",
+    "numpy>=1.24.0",
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "pydantic>=2.0.0",
+    "websockets>=12.0",
+]
+
+[project.optional-dependencies]
+train = [
+    "torch>=2.0.0",
+    "onnxruntime>=1.16.0",
+]
+gpu = [
+    "torch>=2.0.0",
+    "onnxruntime-gpu>=1.16.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/raechao93/OpenGestureXR"
+Repository = "https://github.com/raechao93/OpenGestureXR"
+Issues = "https://github.com/raechao93/OpenGestureXR/issues"
+
+[tool.setuptools.packages.find]
+include = ["ai_engine*", "gesture_api*"]

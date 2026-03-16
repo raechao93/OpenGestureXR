@@ -1,3 +1,5 @@
+# for quick setup: pip install -r requirements.txt
+# for full install: pip install ".[train]"
 mediapipe>=0.10.0
 opencv-python>=4.8.0
 numpy>=1.24.0
