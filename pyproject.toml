@@ -40,6 +40,10 @@ gpu = [
     "torch>=2.0.0",
     "onnxruntime-gpu>=1.16.0",
 ]
+dev = [
+    "pytest>=7.0.0",
+    "httpx>=0.25.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/raechao93/OpenGestureXR"
